@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sheen's Web</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <header>
+  <img class="logo" src="images/KAPI_NOKIA_250804064511938.jpg" alt="Logo">
+  <h1 class="site-title">My Profile</h1>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contacts">Contacts</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <section id="home" class="hero">
+  <div class="intro">
+    <h1>Hello,</h1>
+    <h2>I am Bradley Sheen</h2>
+  </div>
+  <div class="intro-img">
+    <img src="images/KAPI_NOKIA_250804071705807.jpg" alt="Profile Picture">
+  </div>
+</section>
+
+<section id="about" class="about-section">
+  <h1 class="aboutme">About Me:</h1>
+  <p class="aboutmecontents">Good Day, Everyone! I am Bradley Sheen Baldorado.</p>
+  <p class="aboutmecontents">Place: Currently living in City of Bacoor, Cavite, Soldiers Hills 4.</p>
+  <p class="aboutmecontents">School: SHS in San Nicholas, City of Bacoor, Cavite. (Current School)</p>
+  <p class="aboutmecontents">Birthday: May 4, 2009</p>
+  <p class="aboutmecontents">Religion: Reformed Christian Born Again</p>
+</section>
+
+<section id="skills" class="about-section">
+  <h1 class="aboutme">Skills</h1>
+  <p class="aboutmecontents">As an ICT Programming student, I have developed a solid foundation in 
+    various programming languages, web development, and database management. I enjoy creating efficient
+     and user-friendly solutions through coding and problem-solving. My academic experience has also 
+     given me exposure to tools and technologies that are essential in software development, while 
+     enhancing my adaptability, teamwork, and communication skills.</p>
+      <li><strong>Web Development: HTML, CSS</strong></li>
+      <li><strong>Currently Learning: Programming fundamentals, JavaScript, and other languages</strong></li>
+      <li><strong>Soft Skills: Problem-solving, adaptability, attention to detail, willingness to learn</strong></li>
+
+    <br>
+
+    <div class="skill">
+    <p><strong>HTML</strong></p>
+    <div class="skill-bar">
+      <div class="fill" style="width: 80%"></div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <p><strong>CSS</strong></p>
+    <div class="skill-bar">
+      <div class="fill" style="width: 70%"></div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <p><strong>JavaScript (Learning)</strong></p>
+    <div class="skill-bar">
+      <div class="fill" style="width: 40%"></div>
+    </div>
+  </div>
+</section>
+
+    </section>
+
+<section id="portfolio" class="about-section">
+  <h1 class="aboutme">Portfolio</h1>
+  <p class="aboutmecontents">
+  Here are some of my works and projects from my ICT Programming class.</p>
+
+  <h2>1st Quarter Projects</h2>
+  <div class="portfolio-grid">
+    <img src="images/1_Hello_World.PNG" alt="Quarter 1 Project 1">
+    <img src="images/2_Order_Form.PNG" alt="Quarter 1 Project 2">
+    <img src="images/3_Schedule.PNG" alt="Quarter 1 Project 3">
+    <img src="images/4_Quotation_Elements.PNG" alt="Quarter 1 Project 4">
+    <img src="images/5_Resume.PNG" alt="Quarter 1 Project 5">
+    <img src="images/6_Weekend_Routine(LAB Exam).png" alt="Quarter 1 Project 6">
+  </div>
+
+  <h2>2nd Quarter Projects</h2>
+  <div class="portfolio-grid">
+    <img src="images/PeterPanStory_CSS-Demo(Performance_Task2).png" alt="Quarter 2 Project 1">
+    <img src="images/BaldoradoBradleySheen_CSS-Colored-borders(Performance-Task3).png" alt="Quarter 2 Project 2">
+    <img src="images/CSS-Fonts&List-Styling_PT4(BALDORADO_BRADLEY_SHEEN).png" alt="Quarter 2 Project 3">
+  </div>
+</section>
+</p>
+</section>
+
+<section id="contacts" class="about-section">
+  <h1 class="aboutme">Contacts</h1>
+  <p class="aboutmecontents"><ul class="contact-list">
+    <li><strong>Email:</strong> sheenrivera9@gmail.com</li>
+    <li><strong>Phone:</strong> +63 963 045 0665</li>
+    <li><strong>Facebook:</strong> <a href="https://www.facebook.com/share/19tv14ayXy/">Bradley Sheen</a></li>
+    <li><strong>Instagram:</strong> <a href="https://www.instagram.com/_sheen.inurscreen/">_sheen.inurscreen</a></li>
+    <li><strong>GitHub:</strong> <a href="https://www.github.com/SheenRivera/">SheenRivera</a></li>
+    <li><strong>Twitter:</strong> <a href="https://www.twitter.com/sheenflux/">sheenflux</a></li>
+</section>
+
+  <footer>
+    <p>© 2025 Bradley Sheen Baldorado. All rights reserved.</p>
+  </footer>
+
+  <script>
+  
+  function smoothScroll(target, duration, offset) {
+    const targetElement = document.querySelector(target);
+    const targetPosition = targetElement.getBoundingClientRect().top - offset;
+    const startPosition = window.pageYOffset;
+    let startTime = null;
+
+    function animation(currentTime) {
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const run = ease(timeElapsed, startPosition, targetPosition, duration);
+      window.scrollTo(0, run);
+      if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+
+    
+    function ease(t, b, c, d) {
+      t /= d / 2;
+      if (t < 1) return c / 2 * t * t + b;
+      t--;
+      return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(animation);
+  }
+
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function(e) {
+      e.preventDefault();
+      const target = this.getAttribute("href");
+      smoothScroll(target, 800, 100); 
+    });
+  });
+</script>
+
+<script>
+  document.querySelectorAll(".portfolio-grid img").forEach(img => {
+    img.addEventListener("click", () => {
+      img.classList.toggle("active");
+    });
+  });
+</script>
+
+
+</body>
+</html>
